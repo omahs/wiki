@@ -92,7 +92,7 @@ The default HD path for the NEAR app on Ledger devices is `44'/397'/0'/0'/1'`. S
 
 ## 1. Lockup Contracts Delegation
 
-The [Lockup Contract](https://github.com/near/core-contracts/tree/master/lockup) is common among NEAR contributors and, essentially, anyone who didn't acquire tokens through an exchange. This contract acts as an escrow that locks and holds an owner's tokens for a lockup period (such as vesting). You can learn more about lockups and their implementation in the [this documentation page](lockups.md).
+The [Lockup Contract](https://github.com/near/core-contracts/tree/master/lockup) is common among NEAR contributors and, essentially, anyone who didn't acquire tokens through an exchange. This contract acts as an escrow that locks and holds an owner's tokens for a lockup period (such as vesting). You can learn more about lockups and their implementation in [this documentation page](lockups.md).
 
 The owner may want to stake these tokens (including locked ones) to help secure the network and also earn staking rewards that are distributed to the validator. The lockup contract doesn't allow to directly stake from its account, so the owner delegates the tokens using the contract built-in functions.
 
@@ -302,7 +302,7 @@ As an example, if you want to unstake `10` NEAR tokens from the staking pool, yo
 
 ### a. Unstake the tokens
 
-Before unstaking any tokens, use the the view method `get_account` introduced above to know what is the available balance:
+Before unstaking any tokens, use the view method `get_account` introduced above to know what is the available balance:
 
 ```
 near view $POOL_ID get_account '{"account_id": "'$LOCKUP_ID'"}'
